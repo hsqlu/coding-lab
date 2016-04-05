@@ -6,7 +6,7 @@
         <groupId>com.hsqlu</groupId>
         <artifactId>coding-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../common-parent/</relativePath>
+        <relativePath>../coding-parent/</relativePath>
     </parent>
     <artifactId>jmx-demo</artifactId>
     <packaging>jar</packaging>
@@ -31,11 +31,11 @@
     </build>
 
     <dependencies>
-        <dependency>
+      <!--  <dependency>
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
             <version>${metrics.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
