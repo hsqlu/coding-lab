@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.hsqlu</groupId>
+        <artifactId>coding-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>/coding-parent/</relativePath>
+    </parent>
+    <artifactId>platform</artifactId>
+    <name>Coding :: Lab</name>
+    <description>Coding Lab Projects</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>coding-parent</module>
+        <!--<module>carcore</module>-->
+        <module>coding-common</module>
+        <module>coding-spring</module>
+        <module>jmx-demo</module>
+        <!--<module>assistant</module>-->
+        <!--<module>spider</module>-->
+        <!--<module>im</module>-->
+        <!--<module>wechat</module>-->
+    </modules>
+</project>

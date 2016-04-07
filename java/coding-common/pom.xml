@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.hsqlu</groupId>
         <artifactId>coding-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${platform.version}</version>
         <relativePath>../coding-parent/</relativePath>
     </parent>
     <artifactId>coding-common</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>Coding :: Lab :: Common</name>
 
-	</project>
+</project>

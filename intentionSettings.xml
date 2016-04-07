@@ -1,5 +1,0 @@
-<application>
-  <component name="IntentionManagerSettings">
-    <ignoreAction name="Java/Declaration/Wrap Vararg Arguments with Explicit Array Creation" />
-  </component>
-</application>

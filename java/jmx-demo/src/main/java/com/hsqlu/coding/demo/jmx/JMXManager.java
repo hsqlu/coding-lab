@@ -9,14 +9,15 @@ import java.lang.management.ManagementFactory;
  */
 public class JMXManager {
     public static void main(String[] args) throws MalformedObjectNameException, NotCompliantMBeanException, InstanceAlreadyExistsException, MBeanRegistrationException {
-        ApplicationCache cache = new ApplicationCache();
+        StdApplicationCache cache = new StdApplicationCache();
+        ApplicationCacheMBean mBean = new ApplicationCache(cache);
         MBeanServer server = ManagementFactory.getPlatformMBeanServer();
-        ObjectName name = new ObjectName("com.hsqlu.coding.demo.jmx:type=ApplicationCacheMBean");
-        server.registerMBean(cache, name);
+        ObjectName name = new ObjectName("com.hsqlu.coding.demo.jmx:name=ApplicationCacheMBean");
+        server.registerMBean(mBean, name);
         imitateActivity(cache);
     }
 
-    private static void imitateActivity(ApplicationCache cache) {
+    private static void imitateActivity(StdApplicationCache cache) {
         while (true) {
             try {
                 cache.cacheObject(new Object());
