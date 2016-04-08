@@ -8,7 +8,7 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>/coding-parent/</relativePath>
     </parent>
-    <artifactId>platform</artifactId>
+    <artifactId>coding-lab-platform</artifactId>
     <name>Coding :: Lab</name>
     <description>Coding Lab Projects</description>
     <packaging>pom</packaging>
