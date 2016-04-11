@@ -2,13 +2,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>com.hsqlu</groupId>
+        <groupId>com.hsqlu.coding</groupId>
         <artifactId>coding-parent</artifactId>
-        <version>${platform.version}</version>
-        <relativePath>../coding-parent/</relativePath>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../coding-parent</relativePath>
     </parent>
+
     <artifactId>jmx-demo</artifactId>
+    <groupId>com.hsqlu.coding.jmx</groupId>
     <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>Coding :: Lab :: jmx-demo</name>
