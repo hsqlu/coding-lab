@@ -119,11 +119,12 @@
             <artifactId>commons-codec</artifactId>
             <version>1.10</version>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>-->
+            <version>2.4</version>
+        </dependency>
+        <!---->
         <!-- GENERAL UTILS end -->
     </dependencies>
 </project>

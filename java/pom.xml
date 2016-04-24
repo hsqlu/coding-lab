@@ -24,6 +24,7 @@
         <module>jmx-demo</module>
         <module>coding-io</module>
         <module>coding-concurrent</module>
+        <module>coding-metadata</module>
         <!--<module>assistant</module>-->
         <!--<module>spider</module>-->
         <!--<module>im</module>-->
