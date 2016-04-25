@@ -13,6 +13,7 @@
     <groupId>com.hsqlu.coding.spring</groupId>
     <artifactId>coding-spring</artifactId>
     <version>${platform.version}</version>
+    <description>Coding :: Lab :: Spring</description>
 
     <build>
         <plugins>
@@ -26,6 +27,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.0.CR7</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

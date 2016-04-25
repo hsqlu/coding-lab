@@ -13,5 +13,5 @@
 
     <artifactId>codding-io</artifactId>
     <version>${platform.version}</version>
-
+    <description>Coding :: Lab :: IO</description>
 </project>

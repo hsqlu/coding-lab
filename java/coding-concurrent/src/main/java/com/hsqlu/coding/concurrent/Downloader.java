@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Created: 2016/4/11.
@@ -16,15 +17,23 @@ public class Downloader extends Thread {
     private OutputStream out;
 
     private ArrayList<ProcessListener> listeners;
+    private CopyOnWriteArrayList<ProcessListener> copyOnWriteListeners;
 
     public Downloader(URL url, String outputFilename) throws IOException {
         in = url.openConnection().getInputStream();
         out = new FileOutputStream(outputFilename);
         listeners = new ArrayList<>();
+        copyOnWriteListeners = new CopyOnWriteArrayList<>();
     }
 
+    /*
     public synchronized void addListener(ProcessListener listener) {
         listeners.add(listener);
+    }
+    */
+
+    public void addListener(ProcessListener listener) {
+        copyOnWriteListeners.add(listener);
     }
 
     public synchronized void removeListener(ProcessListener listener) {
