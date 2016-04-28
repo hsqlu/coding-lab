@@ -33,6 +33,22 @@
             <artifactId>netty-all</artifactId>
             <version>4.1.0.CR7</version>
         </dependency>
+
+        <!-- etl begin -->
+
+        <dependency>
+            <groupId>com.dragonsoft.bita</groupId>
+            <artifactId>bita-metadata</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!---->
+        <!--<dependency>-->
+            <!--<groupId>com.fw</groupId>-->
+            <!--<artifactId>common</artifactId>-->
+            <!--<version>0.0.1-SNAPSHOT</version>-->
+        <!--</dependency>-->
+        <!-- etl end -->
     </dependencies>
     <dependencyManagement>
         <dependencies>
