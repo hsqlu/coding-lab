@@ -15,11 +15,47 @@
     <version>1.0.0-SNAPSHOT</version>
     <description>Coding :: Lab :: Metadata</description>
 
+    <properties>
+        <spring.data.jpa.version>1.9.2.RELEASE</spring.data.jpa.version>
+        <hibernate-validator.version>5.0.2.Final</hibernate-validator.version>
+        <hibernate.data.version>4.3.6.Final</hibernate.data.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
         </dependency>
+
+
+
+        <!--spring data jpa start-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring.data.jpa.version}</version>
+        </dependency>
+        <!--spring data jpa end-->
+
+        <!--hibernate data-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.data.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.data.version}</version>
+        </dependency>
+        <!--hibernate data-->
+
+        <!--hibernate validator start-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+        <!--hibernate validator end-->
     </dependencies>
 </project>

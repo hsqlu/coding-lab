@@ -10,6 +10,11 @@ import java.util.Deque;
  */
 public class Main {
     public static void main(String[] args) {
+        System.out.print(Thread.currentThread().getName());
+
+       new Thread (() -> System.out.print(Thread.currentThread().getName())).start();
+
+        /*
         Deque<Event> deque = new ArrayDeque<>();
         WriterTask writer = new WriterTask(deque);
         for (int i = 0; i < 3; ++i) {
@@ -17,7 +22,7 @@ public class Main {
             thread.start();
         }
         CleanerTask cleaner = new CleanerTask(deque);
-        cleaner.start();
+        cleaner.start();*/
     }
 
     /*private static void demoTask() {

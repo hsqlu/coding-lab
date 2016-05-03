@@ -1,19 +1,33 @@
 package com.hsqlu.coding.bita.metadata.model.core;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created: 2016/4/21.
  * Author: Qiannan Lu
  */
+@Entity
+@Table(name = "T_MD_ELEMENT")
+@GenericGenerator(name = "ID", strategy = "uuid.hex")
+@DiscriminatorValue("ModelElement")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class ModelElement<OWNER extends ModelElement> implements Comparable<ModelElement>, Serializable {
     private static final long serialVersionUID = 2083510309971692268L;
 
+    @Id
+    @Column(length = 32)
     protected String id;
+
+
+    @Column(name = "NAME", length = 100)
     protected String name;
     protected Integer version;
     protected String type;
-    //// TODO: 2016/4/21 what's means by this property
+
+    // TODO: 2016/4/21 what's means by this property
     protected String memo;
     protected String code;
     protected OWNER owner;

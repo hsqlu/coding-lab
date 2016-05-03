@@ -58,6 +58,12 @@
             <version>2.6.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>4.5.0</version>
+        </dependency>
+
         <!--for check the source code of mina-->
         <!--
         <dependency>
