@@ -1,0 +1,13 @@
+import "ProtoCS.BaseMessage";
+
+option java_outer_classname = "CustomerMessageProto";
+
+package ProtoCS;
+
+message CustomerMessage {
+	optional string content = 1;
+}
+
+extend Message {
+    optional CustomerMessage message = 126;
+}

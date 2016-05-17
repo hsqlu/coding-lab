@@ -14,8 +14,6 @@ public class FeatureNode extends ExpressionNode implements Serializable {
 
     private Map<String, ExpressionNode> arguments = Maps.newLinkedHashMap();
 
-    private String javaClass;
-
     public ExpressionNode getArgument(String argumentName) {
         return arguments.get(argumentName);
     }
@@ -30,15 +28,5 @@ public class FeatureNode extends ExpressionNode implements Serializable {
 
     public void setArguments(Map<String, ExpressionNode> arguments) {
         this.arguments = arguments;
-    }
-
-    @Override
-    public String getJavaClass() {
-        return javaClass;
-    }
-
-    @Override
-    public void setJavaClass(String javaClass) {
-        this.javaClass = javaClass;
     }
 }

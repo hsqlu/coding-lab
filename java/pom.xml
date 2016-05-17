@@ -25,6 +25,7 @@
         <module>coding-io</module>
         <module>coding-concurrent</module>
         <module>coding-metadata</module>
+        <module>coding-benchmark</module>
         <!--<module>assistant</module>-->
         <!--<module>spider</module>-->
         <!--<module>im</module>-->

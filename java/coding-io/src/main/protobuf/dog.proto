@@ -1,0 +1,12 @@
+import "animal.proto";
+
+message Dog
+{
+    extend Animal
+    {
+        required Dog animal = 101; // Unique Animal extension number
+    }
+
+    // These fields can use the full number range.
+    optional uint32 bones_buried = 1;
+}

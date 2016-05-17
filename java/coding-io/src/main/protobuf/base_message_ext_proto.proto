@@ -1,0 +1,5 @@
+option java_package = "com.code.common.serialize.protobuf.proto";
+
+message BaseMessageExt {
+    repeated string router = 1;
+}

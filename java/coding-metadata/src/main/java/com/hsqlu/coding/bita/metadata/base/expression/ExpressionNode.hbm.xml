@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.hsqlu.coding.bita.metadata.base.expression.ExpressionNode"
+           table="T_MD_EXP_NODE">
+        <id name="expressionNodeId" type="string">
+            <column name="EXP_NODE_ID" length="32"/>
+            <generator class="org.hibernate.id.UUIDHexGenerator"/>
+        </id>
+        <discriminator column="EXP_NODE_TYPE"/>
+
+        <property name="name" type="string" column="EXP_NAME"/>
+
+        <property name="code" type="string" column="EXP_CODE"/>
+
+        <subclass name="com.hsqlu.coding.bita.metadata.base.expression.ElementNode" discriminator-value="ElementNode">
+            <many-to-one name="dataType"
+                         column="DATA_TYPE_ID"
+                         class="com.hsqlu.coding.bita.metadata.model.core.Classifier">
+            </many-to-one>
+        </subclass>
+
+        <subclass name="com.hsqlu.coding.bita.metadata.base.expression.FeatureNode" discriminator-value="FeatureNode">
+            <property name="javaClass" type="string">
+                <column name="JAVA_CLASS" length="500">
+                    <comment>具体的JAVA类</comment>
+                </column>
+            </property>
+
+            <map name="arguments" cascade="all" table="T_MD_EXP_RELATION">
+                <key column="PARENT_EXP_NODE_ID"/>
+                <map-key type="string" column="EXP_MK"/>
+                <many-to-many column="CHILD_EXP_NODE_ID"
+                              class="com.hsqlu.coding.bita.metadata.base.expression.ExpressionNode"/>
+            </map>
+
+            <subclass name="com.hsqlu.coding.bita.metadata.base.expression.PartitionNode"
+                      discriminator-value="PARTITION">
+            </subclass>
+        </subclass>
+    </class>
+</hibernate-mapping>

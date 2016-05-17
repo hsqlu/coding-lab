@@ -1,0 +1,12 @@
+package ProtoCS;
+
+message BaseMessage {
+    required string identity = 1;
+    required int32 type = 2;
+
+}
+
+message Message {
+    required BaseMessage base = 1;
+    extensions 100 to 10000;
+}

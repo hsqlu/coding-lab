@@ -1,0 +1,11 @@
+import "base_message_proto.proto";
+
+option java_package = "com.code.common.serialize.protobuf.proto";
+
+message CustomerMessage {
+    extend BaseMessage {
+        required CustomerMessage customer = 100; // Unique Animal extension number
+    }
+
+    required string content = 1;
+}
