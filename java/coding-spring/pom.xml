@@ -15,6 +15,31 @@
     <version>${platform.version}</version>
     <description>Coding :: Lab :: Spring</description>
 
+
+    <profiles>
+        <profile>
+            <id>development</id>
+            <properties>
+                <env>development</env>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <env>product</env>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
@@ -32,13 +57,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
         </dependency>
-<!--
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.1.0.CR7</version>
         </dependency>
--->
 
         <!--数据库连接 start-->
         <dependency>
@@ -73,22 +96,6 @@
             <version>1.9.2.RELEASE</version>
         </dependency>
         <!--数据库连接 end-->
-
-        <!-- etl begin -
-
-        <dependency>
-            <groupId>com.dragonsoft.bita</groupId>
-            <artifactId>bita-metadata</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        -->
-
-        <!--<dependency>-->
-            <!--<groupId>com.fw</groupId>-->
-            <!--<artifactId>common</artifactId>-->
-            <!--<version>0.0.1-SNAPSHOT</version>-->
-        <!--</dependency>-->
-        <!-- etl end -->
     </dependencies>
     <dependencyManagement>
         <dependencies>
