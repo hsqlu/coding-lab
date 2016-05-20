@@ -1,18 +1,11 @@
 package com.hsqlu.coding.web.config;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.hsqlu.coding.web.util.JsonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.method.support.HandlerMethodArgumentResolver;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
-import java.util.List;
 
 /**
  * Created: 2016/4/11.
@@ -20,9 +13,13 @@ import java.util.List;
  */
 @Configuration
 @EnableWebMvc
+@PropertySource(value = "classpath:druid.properties")
+
 //@ComponentScan(value = "com.hsqlu.coding.web", includeFilters = @ComponentScan.Filter(Controller.class))
 @ComponentScan(value = "com.hsqlu.coding.web")
 public class WebConfig {
+    @Autowired
+    private Environment env;
     /*@Autowired
     private ApplicationInterceptor applicationInterceptor;
 

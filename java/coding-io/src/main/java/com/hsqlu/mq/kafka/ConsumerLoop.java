@@ -12,6 +12,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * refer to : http://zqhxuyuan.github.io/2016/02/20/Kafka-Consumer-New/
+ *
  * Created: 2016/5/17.
  * Author: Qiannan Lu
  */
@@ -24,7 +26,7 @@ public class ConsumerLoop implements Runnable {
         this.id = id;
         this.topics = topics;
         Properties props = new Properties();
-        props.put("bootstrap.servers", "localhost:9092");
+        props.put("bootstrap.servers", "192.168.56.2:9092");
         props.put("group.id", groupId);
         props.put("key.deserializer", StringDeserializer.class.getName());
         props.put("value.deserializer", StringDeserializer.class.getName());
