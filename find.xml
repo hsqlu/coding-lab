@@ -1,6 +1,6 @@
 <application>
   <component name="FindSettings">
-    <option name="FILE_MASK" value="*.java" />
+    <option name="FILE_MASK" value="*.hbm.xml" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
@@ -11,8 +11,8 @@
       <mask>*.css</mask>
       <mask>*.mxml</mask>
       <mask>*.*</mask>
-      <mask>*.hbm.xml</mask>
       <mask>*.java</mask>
+      <mask>*.hbm.xml</mask>
     </recentFileMasks>
   </component>
 </application>
