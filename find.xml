@@ -1,6 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="FILE_MASK" value="*.xml" />
+    <option name="caseSensitive" value="true" />
+    <option name="CASE_SENSITIVE_SEARCH" value="true" />
+    <option name="FILE_MASK" value="*.java" />
     <recentFileMasks>
       <mask>*.properties</mask>
       <mask>*.html</mask>
@@ -11,9 +13,9 @@
       <mask>*.*</mask>
       <mask>*.hbm.xml</mask>
       <mask>*.jsp</mask>
-      <mask>*.java</mask>
       <mask>*Test.java</mask>
       <mask>*.xml</mask>
+      <mask>*.java</mask>
     </recentFileMasks>
   </component>
 </application>
