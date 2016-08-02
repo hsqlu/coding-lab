@@ -26,6 +26,7 @@
         <module>coding-concurrent</module>
         <module>coding-metadata</module>
         <module>coding-benchmark</module>
+        <module>coding-vampire</module>
         <!--<module>assistant</module>-->
         <!--<module>spider</module>-->
         <!--<module>im</module>-->

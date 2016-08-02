@@ -11,7 +11,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <spring.version>4.2.1.RELEASE</spring.version>
+        <spring.version>4.2.0.RELEASE</spring.version>
         <druid.version>1.0.1</druid.version>
         <junit.version>4.12</junit.version>
         <logback.version>1.1.2</logback.version>
@@ -23,6 +23,30 @@
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <guava.version>18.0</guava.version>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>development</id>
+            <properties>
+                <env>development</env>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <env>product</env>
+            </properties>
+        </profile>
+    </profiles>
 
     <repositories>
         <repository>
@@ -96,6 +120,11 @@
             </dependency>
 
             <!-- LOGGING begin -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
             <!-- 代码直接调用log4j会被桥接到slf4j -->
             <dependency>
                 <groupId>org.slf4j</groupId>

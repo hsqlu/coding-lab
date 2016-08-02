@@ -34,6 +34,13 @@
     </build>
 
     <dependencies>
+        <!-- http://mvnrepository.com/artifact/com.sun.jdmk/jmxtools -->
+        <dependency>
+            <groupId>com.sun.jdmk</groupId>
+            <artifactId>jmxtools</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
       <!--  <dependency>
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
