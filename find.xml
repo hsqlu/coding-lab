@@ -13,11 +13,11 @@
       <mask>*Test.java</mask>
       <mask>*Action.java</mask>
       <mask>*</mask>
-      <mask>*.java</mask>
       <mask>*.xml</mask>
       <mask>pom.xml</mask>
       <mask>*.jsp</mask>
       <mask>*.properties</mask>
+      <mask>*.java</mask>
       <mask>*.*</mask>
     </recentFileMasks>
   </component>
