@@ -2,24 +2,24 @@
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="FILE_MASK" value="*.xm" />
+    <option name="FILE_MASK" value="*.hbm.xml" />
     <recentFileMasks>
       <mask>*.html</mask>
       <mask>*.js</mask>
       <mask>*.as</mask>
       <mask>*.css</mask>
       <mask>*.mxml</mask>
-      <mask>*.hbm.xml</mask>
       <mask>*Test.java</mask>
       <mask>*Action.java</mask>
       <mask>*</mask>
-      <mask>*.xml</mask>
       <mask>pom.xml</mask>
       <mask>*.jsp</mask>
       <mask>*.properties</mask>
       <mask>*.java</mask>
       <mask>*.*</mask>
       <mask>*.xm</mask>
+      <mask>*.xml</mask>
+      <mask>*.hbm.xml</mask>
     </recentFileMasks>
   </component>
 </application>
