@@ -2,7 +2,7 @@
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="FILE_MASK" value="*.java" />
+    <option name="FILE_MASK" value="*.properties" />
     <recentFileMasks>
       <mask>*.html</mask>
       <mask>*.as</mask>
@@ -12,7 +12,6 @@
       <mask>*Action.java</mask>
       <mask>*</mask>
       <mask>pom.xml</mask>
-      <mask>*.properties</mask>
       <mask>*.xm</mask>
       <mask>*.hbm.xml</mask>
       <mask>*.js</mask>
@@ -21,6 +20,7 @@
       <mask>*Controller.java</mask>
       <mask>*.jsp</mask>
       <mask>*.java</mask>
+      <mask>*.properties</mask>
     </recentFileMasks>
   </component>
 </application>
