@@ -17,9 +17,9 @@
       <mask>*.properties</mask>
       <mask>pom.xml</mask>
       <mask>*.xml</mask>
-      <mask>*.*</mask>
       <mask>*.jsp</mask>
       <mask>*Controller.java</mask>
+      <mask>*.*</mask>
       <mask>*.java</mask>
     </recentFileMasks>
   </component>
