@@ -151,6 +151,7 @@
   <component name="WebServicesPluginSettings" SelectedPlatform="Apache Axis">
     <StubPackage>com.dragonsoft.cube.ws.client</StubPackage>
     <StubPackage>example</StubPackage>
+    <StubUrl>http://localhost:8080/services/CommonModelService?wsdl</StubUrl>
     <StubUrl>http://localhost:8080/services/App?wsdl</StubUrl>
     <StubUrl>http://localhost:8080/services/HelloWorld?wsdl</StubUrl>
   </component>
