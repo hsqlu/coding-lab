@@ -148,5 +148,8 @@
   <component name="RefactoringSettings">
     <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="false" />
   </component>
-  <component name="WebServicesPluginSettings" SelectedPlatform="Apache Axis" />
+  <component name="WebServicesPluginSettings" SelectedPlatform="Apache Axis">
+    <StubPackage>example</StubPackage>
+    <StubUrl>http://localhost:8080/services/HelloWorld?wsdl</StubUrl>
+  </component>
 </application>
