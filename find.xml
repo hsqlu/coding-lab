@@ -13,11 +13,11 @@
       <mask>*.hbm.xml</mask>
       <mask>*.js</mask>
       <mask>pom.xml</mask>
-      <mask>*.xml</mask>
       <mask>*Controller.java</mask>
       <mask>*.properties</mask>
       <mask>*.jsp</mask>
       <mask>*.*</mask>
+      <mask>*.xml</mask>
       <mask>*.java</mask>
     </recentFileMasks>
   </component>
