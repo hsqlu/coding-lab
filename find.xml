@@ -14,10 +14,10 @@
       <mask>pom.xml</mask>
       <mask>*Controller.java</mask>
       <mask>*.properties</mask>
-      <mask>*.jsp</mask>
       <mask>*.hbm.xml</mask>
       <mask>*.*</mask>
       <mask>*.xml</mask>
+      <mask>*.jsp</mask>
       <mask>*.java</mask>
     </recentFileMasks>
   </component>
