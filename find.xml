@@ -7,7 +7,6 @@
       <mask>*.css</mask>
       <mask>*.mxml</mask>
       <mask>*Test.java</mask>
-      <mask>*Action.java</mask>
       <mask>*</mask>
       <mask>*.xm</mask>
       <mask>*.js</mask>
@@ -19,6 +18,8 @@
       <mask>*.*</mask>
       <mask>*.xml</mask>
       <mask>*.jav</mask>
+      <mask>Action.java</mask>
+      <mask>*Action.java</mask>
       <mask>*.java</mask>
     </recentFileMasks>
   </component>
