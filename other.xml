@@ -136,6 +136,7 @@
   </component>
   <component name="ExternalResourceManagerImpl">
     <resource url="http://www.puppycrawl.com/dtds/configuration_1_3.dtd" location="$MAVEN_REPOSITORY$/com/puppycrawl/tools/checkstyle/6.14.1/checkstyle-6.14.1.jar!/com/puppycrawl/tools/checkstyle/configuration_1_3.dtd" />
+    <resource url="http://www.puppycrawl.com/dtds/suppressions_1_1.dtd" location="$MAVEN_REPOSITORY$/com/puppycrawl/tools/checkstyle/6.14.1/checkstyle-6.14.1.jar!/com/puppycrawl/tools/checkstyle/suppressions_1_1.dtd" />
   </component>
   <component name="ImportConfiguration">
     <option name="VENDOR" />
