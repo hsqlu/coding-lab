@@ -1,6 +1,6 @@
 <application>
   <component name="FindSettings">
-    <option name="FILE_MASK" value="*.java" />
+    <option name="FILE_MASK" value="*.jsp" />
     <recentFileMasks>
       <mask>*.html</mask>
       <mask>*.as</mask>
@@ -19,8 +19,8 @@
       <mask>*Action.java</mask>
       <mask>*.xml</mask>
       <mask>*.*</mask>
-      <mask>*.jsp</mask>
       <mask>*.java</mask>
+      <mask>*.jsp</mask>
     </recentFileMasks>
   </component>
 </application>
