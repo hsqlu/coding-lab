@@ -2,7 +2,7 @@
   <component name="FindSettings">
     <option name="regularExpressions" value="true" />
     <option name="REGULAR_EXPRESSIONS" value="true" />
-    <option name="FILE_MASK" value="*.xml" />
+    <option name="FILE_MASK" value="H*.java" />
     <recentFileMasks>
       <mask>*.html</mask>
       <mask>*.as</mask>
@@ -23,6 +23,9 @@
       <mask>*.*</mask>
       <mask>*.java</mask>
       <mask>*.xml</mask>
+      <mask>Hbase.xml</mask>
+      <mask>Hbase*.java</mask>
+      <mask>H*.java</mask>
     </recentFileMasks>
   </component>
 </application>
