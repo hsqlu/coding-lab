@@ -34,6 +34,9 @@
             <Goal>
               <option name="commandLine" value="install -Dmaven.test.skip=true" />
             </Goal>
+            <Goal>
+              <option name="commandLine" value="clean jetty:run -DskipTests" />
+            </Goal>
           </list>
         </option>
       </Goals>
