@@ -5,7 +5,7 @@
     <option name="regularExpressions" value="true" />
     <option name="REGULAR_EXPRESSIONS" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.jsp" />
+    <option name="FILE_MASK" value="*.xml" />
     <recentFileMasks>
       <mask>*.html</mask>
       <mask>*.as</mask>
@@ -24,8 +24,6 @@
       <mask>Hbase*.java</mask>
       <mask>H*.java</mask>
       <mask>*.xm</mask>
-      <mask>*.x</mask>
-      <mask>*.xml</mask>
       <mask>*.j's'p</mask>
       <mask>*.j'a'v</mask>
       <mask>*.jav</mask>
@@ -37,6 +35,8 @@
       <mask>*.java</mask>
       <mask>*.jspa</mask>
       <mask>*.jsp</mask>
+      <mask>*.x</mask>
+      <mask>*.xml</mask>
     </recentFileMasks>
   </component>
 </application>
