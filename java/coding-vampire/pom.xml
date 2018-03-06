@@ -8,13 +8,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>coding-vampire</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <name>coding-vampire</name>
+    <name>Coding :: Vampire</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>../coding-rest-client</module>
+    </modules>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
     </properties>
 
     <dependencies>

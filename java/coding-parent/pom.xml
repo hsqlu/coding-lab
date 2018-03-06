@@ -10,6 +10,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <spring.version>4.2.0.RELEASE</spring.version>
         <druid.version>1.0.1</druid.version>
@@ -48,22 +49,22 @@
         </profile>
     </profiles>
 
-    <repositories>
-        <repository>
-            <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
-        </repository>
-        <repository>
-            <id>mvnrepository</id>
-            <url>http://mvnrepository.com/</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>spring-releases</id>-->
+            <!--<url>https://repo.spring.io/libs-release</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+            <!--<id>mvnrepository</id>-->
+            <!--<url>http://mvnrepository.com/</url>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+    <!--<pluginRepositories>-->
+        <!--<pluginRepository>-->
+            <!--<id>spring-releases</id>-->
+            <!--<url>https://repo.spring.io/libs-release</url>-->
+        <!--</pluginRepository>-->
+    <!--</pluginRepositories>-->
 
     <dependencies>
         <!-- Test Begin -->
@@ -173,6 +174,13 @@
                 <version>3.1.0</version>
                 <scope>provided</scope>
             </dependency>
+
+            <!-- http client util -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5</version>
+            </dependency>
             <!-- WEB end -->
 
             <!-- GENERAL UTILS begin -->
@@ -205,6 +213,21 @@
                         <showWarnings>true</showWarnings>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.1</version>
+                    <configuration>
+                        <attach>true</attach>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -213,17 +236,5 @@
                 <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
         </plugins>
-        <filters>
-            <filter>src/main/filters/filter-${env}.properties</filter>
-        </filters>
-        <resources>
-            <resource>
-                <directory>src/main/filters/resources/${env}</directory>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
     </build>
 </project>
