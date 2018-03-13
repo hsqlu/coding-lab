@@ -1,16 +1,14 @@
 <application>
   <component name="FindSettings">
+    <option name="caseSensitive" value="true" />
     <option name="customScope" value="All Places" />
     <option name="defaultScopeName" value="All Places" />
     <option name="localCaseSensitive" value="true" />
-    <option name="regularExpressions" value="true" />
+    <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="LOCAL_CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="REGULAR_EXPRESSIONS" value="true" />
     <option name="SEARCH_SCOPE" value="All Places" />
-    <option name="FILE_MASK" value="*.jsp" />
+    <option name="FILE_MASK" value="*.go" />
     <recentFileMasks>
-      <mask>*.as</mask>
-      <mask>*.css</mask>
       <mask>*.mxml</mask>
       <mask>*Test.java</mask>
       <mask>*</mask>
@@ -39,6 +37,8 @@
       <mask>*.</mask>
       <mask>*.jsp&lt;</mask>
       <mask>*.jsp</mask>
+      <mask>*.g</mask>
+      <mask>*.go</mask>
     </recentFileMasks>
   </component>
 </application>
