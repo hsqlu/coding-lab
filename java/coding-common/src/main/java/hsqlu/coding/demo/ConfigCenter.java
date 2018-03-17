@@ -21,7 +21,7 @@ public class ConfigCenter {
     public static void main(String[] args) throws Exception {
 
         CuratorFrameworkFactory.Builder builder = CuratorFrameworkFactory.builder()
-                .connectString("192.168.56.2:2181")
+                .connectString("192.168.56.2:2181，192.168.56.3:2181,192.168.56.4:2181")
                 .retryPolicy(new RetryNTimes(1, 1000))
                 .connectionTimeoutMs(5000);
 //        String authority = url.getAuthority();

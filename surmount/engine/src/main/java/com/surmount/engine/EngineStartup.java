@@ -7,6 +7,6 @@ package com.surmount.engine;
 public class EngineStartup {
 
     public static void main(String[] args) {
-        
+
     }
 }
