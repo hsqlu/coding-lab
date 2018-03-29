@@ -1,5 +1,5 @@
 <application>
-  <component name="FileTypeManager" version="17">
+  <component name="FileTypeManager" version="16">
     <extensionMap>
       <mapping pattern="" type="Native" />
       <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
