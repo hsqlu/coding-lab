@@ -1,5 +1,6 @@
 <application>
   <component name="UISettings">
+    <option name="FONT_FACE" value="Microsoft YaHei" />
     <option name="HIDE_TOOL_STRIPES" value="false" />
     <option name="MOVE_MOUSE_ON_DEFAULT_BUTTON" value="true" />
     <option name="OVERRIDE_NONIDEA_LAF_FONTS" value="true" />
