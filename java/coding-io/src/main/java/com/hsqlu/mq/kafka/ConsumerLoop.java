@@ -3,6 +3,7 @@ package com.hsqlu.mq.kafka;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.errors.WakeupException;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
@@ -26,7 +27,8 @@ public class ConsumerLoop implements Runnable {
         this.id = id;
         this.topics = topics;
         Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.56.2:9092");
+//        props.put("bootstrap.servers", "192.168.56.2:9092");
+        props.put("bootstrap.servers", "192.168.4.122:9092");
         props.put("group.id", groupId);
         props.put("key.deserializer", StringDeserializer.class.getName());
         props.put("value.deserializer", StringDeserializer.class.getName());
@@ -37,8 +39,10 @@ public class ConsumerLoop implements Runnable {
     public void run() {
         try {
             consumer.subscribe(topics);
+//            consumer.seek(new TopicPartition(topics.get(0), 0), 0);;
 
             while (true) {
+                consumer.seekToBeginning();
                 ConsumerRecords<String, String> records = consumer.poll(Long.MAX_VALUE);
                 for (ConsumerRecord<String, String> record : records) {
                     Map<String, Object> data = new HashMap<>();
@@ -61,8 +65,8 @@ public class ConsumerLoop implements Runnable {
 
     public static void main(String[] args) {
         int numConsumers = 3;
-        String groupId = "consumer-tutorial-group";
-        List<String> topics = Collections.singletonList("consumer-tutorial");
+        String groupId = "consumer-test-group";
+        List<String> topics = Collections.singletonList("test");
         final ExecutorService executor = Executors.newFixedThreadPool(numConsumers);
 
         final List<ConsumerLoop> consumers = new ArrayList<>();

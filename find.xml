@@ -1,31 +1,23 @@
 <application>
   <component name="FindSettings">
-    <option name="regularExpressions" value="true" />
-    <option name="REGULAR_EXPRESSIONS" value="true" />
-    <option name="FILE_MASK" value="H*.java" />
+    <option name="caseSensitive" value="true" />
+    <option name="customScope" value="All Places" />
+    <option name="defaultScopeName" value="All Places" />
+    <option name="CASE_SENSITIVE_SEARCH" value="true" />
+    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="FILE_MASK" value="*.xml" />
     <recentFileMasks>
+      <mask>*.properties</mask>
       <mask>*.html</mask>
+      <mask>*.jsp</mask>
+      <mask>*.java</mask>
+      <mask>*.js</mask>
       <mask>*.as</mask>
       <mask>*.css</mask>
       <mask>*.mxml</mask>
-      <mask>*Test.java</mask>
-      <mask>*</mask>
+      <mask>*.x</mask>
       <mask>*.xm</mask>
-      <mask>*.js</mask>
-      <mask>pom.xml</mask>
-      <mask>*Controller.java</mask>
-      <mask>*.properties</mask>
-      <mask>*.hbm.xml</mask>
-      <mask>Action.java</mask>
-      <mask>*Action.java</mask>
-      <mask>*.jsp</mask>
-      <mask>*.jav</mask>
-      <mask>*.*</mask>
-      <mask>*.java</mask>
       <mask>*.xml</mask>
-      <mask>Hbase.xml</mask>
-      <mask>Hbase*.java</mask>
-      <mask>H*.java</mask>
     </recentFileMasks>
   </component>
 </application>

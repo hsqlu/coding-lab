@@ -1,3 +1,0 @@
-<application>
-  <component name="MavenVersion" vmOptions="-Xmx512m -Didea.maven3.use.compat.resolver" mavenHome="Bundled (Maven 3)" />
-</application>

@@ -12,7 +12,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * Author: Qiannan Lu
  */
 public class NettyDemo {
-    public static void main(String[] args) throws InterruptedException {
+    /*public static void main(String[] args) throws InterruptedException {
         ServerBootstrap server = new ServerBootstrap();
 
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -22,5 +22,5 @@ public class NettyDemo {
 
 
         server.bind(11211).sync();
-    }
+    }*/
 }
