@@ -37,6 +37,9 @@
             <Goal>
               <option name="commandLine" value="clean install -Dmaven.test.skip=true" />
             </Goal>
+            <Goal>
+              <option name="commandLine" value="clean install -Dmaven.test.skip=true -Denforcer.skip=true" />
+            </Goal>
           </list>
         </option>
       </Goals>
