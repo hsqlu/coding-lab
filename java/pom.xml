@@ -29,6 +29,7 @@
         <module>coding-vampire</module>
         <module>coding-trace-interface</module>
         <module>coding-parent-web</module>
+        <module>coding-cryptography</module>
         <!--<module>assistant</module>-->
         <!--<module>spider</module>-->
         <!--<module>im</module>-->
