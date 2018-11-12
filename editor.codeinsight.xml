@@ -1,5 +1,0 @@
-<application>
-  <component name="CodeInsightSettings">
-    <EXCLUDED_PACKAGE NAME="com.google.common.base.Preconditions.checkArgument" />
-  </component>
-</application>

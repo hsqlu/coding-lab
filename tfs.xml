@@ -1,5 +1,0 @@
-<application>
-  <component name="org.jetbrains.tfsIntegration.core.configuration.TFSConfigurationManager">
-    <option name="useIdeaHttpProxy" value="false" />
-  </component>
-</application>
