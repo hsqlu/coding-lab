@@ -25,7 +25,7 @@
         <module>coding-io</module>
         <module>coding-concurrent</module>
         <module>coding-metadata</module>
-        <!--<module>coding-benchmark</module>-->
+        <module>coding-benchmark</module>
         <module>coding-vampire</module>
         <module>coding-trace-interface</module>
         <module>coding-parent-web</module>

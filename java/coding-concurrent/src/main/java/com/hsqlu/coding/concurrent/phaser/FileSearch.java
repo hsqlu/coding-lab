@@ -100,7 +100,7 @@ public class FileSearch implements Runnable {
         Phaser phaser = new Phaser(3);
         FileSearch system = new FileSearch("C:\\Windows", "log", phaser);
         FileSearch apps = new FileSearch("C:\\Program Files", "log", phaser);
-        FileSearch documents = new FileSearch("C:\\Users\\luqiannan\\Documents", "log", phaser);
+        FileSearch documents = new FileSearch("C:\\Users\\qlu3\\Documents", "log", phaser);
         Thread systemThread = new Thread(system, "System");
         systemThread.start();
 

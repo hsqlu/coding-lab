@@ -6,15 +6,7 @@ package com.hsqlu.coding.jmx;
  */
 
 
-import javax.management.InstanceAlreadyExistsException;
-import javax.management.MBeanRegistrationException;
-import javax.management.MBeanServer;
-import javax.management.MBeanServerFactory;
-import javax.management.MalformedObjectNameException;
-import javax.management.NotCompliantMBeanException;
-import javax.management.ObjectName;
-
-import com.sun.jdmk.comm.HtmlAdaptorServer;
+import javax.management.*;
 
 public class HelloDynamicAgent {
     private static String DOMAIN = "MyDynamicMBean";
@@ -33,15 +25,15 @@ public class HelloDynamicAgent {
         //创建DynamicMBean对象
         HelloDynamic hello = new HelloDynamic();
         //创建一个web适配器服务器，表示我们MBean服务通过web形式来提供给用户管理
-        HtmlAdaptorServer htmlserver = new HtmlAdaptorServer();
-        htmlserver.setPort(9999);
+//        HtmlAdaptorServer htmlserver = new HtmlAdaptorServer();
+//        htmlserver.setPort(9999);
         //ObjctName对象类似于完整的package
         ObjectName helloname = new ObjectName(DOMAIN + ":name=HelloDynamic");
         ObjectName htmlname = new ObjectName(DOMAIN + ":name=HtmlAdaptor");
         server.registerMBean(hello, helloname);
-        server.registerMBean(htmlserver, htmlname);
+//        server.registerMBean(htmlserver, htmlname);
 
-        htmlserver.start();
+//        htmlserver.start();
     }
 
 }
