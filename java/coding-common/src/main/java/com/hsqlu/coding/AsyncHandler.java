@@ -1,4 +1,4 @@
-package hsqlu.coding.demo;
+package com.hsqlu.coding;
 
 import java.io.BufferedWriter;
 import java.io.File;
