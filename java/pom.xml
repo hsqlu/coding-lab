@@ -18,22 +18,15 @@
         <module>coding-spring</module>
 
         <module>coding-parent</module>
-        <!--<module>carcore</module>-->
         <module>coding-common</module>
         <module>coding-web</module>
         <module>jmx-demo</module>
         <module>coding-io</module>
         <module>coding-concurrent</module>
-        <module>coding-metadata</module>
         <module>coding-benchmark</module>
         <module>coding-vampire</module>
-        <module>coding-trace-interface</module>
         <module>coding-parent-web</module>
         <module>coding-cryptography</module>
-        <!--<module>assistant</module>-->
-        <!--<module>spider</module>-->
-        <!--<module>im</module>-->
-        <!--<module>wechat</module>-->
     </modules>
 
     <build>
