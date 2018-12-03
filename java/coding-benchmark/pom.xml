@@ -8,12 +8,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>codding-benchmark</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>codding-benchmark</name>
     <url>http://maven.apache.org</url>
+  <modules>
+    <module>../coding-grpc</module>
+  </modules>
 
-    <properties>
+  <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
