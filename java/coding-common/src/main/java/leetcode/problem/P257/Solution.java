@@ -41,15 +41,13 @@ public class Solution {
             return result;
         }
 
-        TreeNode visitor = root;
-
-        if (visitor.left == null && visitor.right == null) {
-            result.add("" + visitor.val);
+        if (root.left == null && root.right == null) {
+            result.add("" + root.val);
         } else {
-            for (String a : binaryTreePaths(visitor.left)) {
+            for (String a : binaryTreePaths(root.left)) {
                 result.add(root.val + "->" + a);
             }
-            for (String b : binaryTreePaths(visitor.right)) {
+            for (String b : binaryTreePaths(root.right)) {
                 result.add(root.val + "->" + b);
             }
         }
