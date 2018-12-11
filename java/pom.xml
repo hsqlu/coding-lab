@@ -23,7 +23,7 @@
         <module>jmx-demo</module>
         <module>coding-io</module>
         <module>coding-concurrent</module>
-        <module>coding-benchmark</module>
+        <module>coding-jmh</module>
         <module>coding-vampire</module>
         <module>coding-parent-web</module>
         <module>coding-cryptography</module>
