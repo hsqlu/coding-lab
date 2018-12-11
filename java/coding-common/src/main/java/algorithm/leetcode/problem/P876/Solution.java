@@ -1,6 +1,6 @@
 package algorithm.leetcode.problem.P876;
 
-import algorithm.leetcode.problem.ListNode;
+import algorithm.common.ListNode;
 
 /**
  * 876. Middle of the Linked List

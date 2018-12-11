@@ -1,6 +1,6 @@
 package algorithm.leetcode.problem.P203;
 
-import algorithm.leetcode.problem.ListNode;
+import algorithm.common.ListNode;
 
 /**
  * 203. Remove Linked List Elements

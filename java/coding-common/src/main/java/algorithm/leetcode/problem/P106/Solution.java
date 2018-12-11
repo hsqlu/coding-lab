@@ -1,6 +1,6 @@
 package algorithm.leetcode.problem.P106;
 
-import algorithm.leetcode.problem.TreeNode;
+import algorithm.common.TreeNode;
 
 import java.util.Arrays;
 

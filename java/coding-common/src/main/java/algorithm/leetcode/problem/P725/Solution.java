@@ -1,7 +1,7 @@
 package algorithm.leetcode.problem.P725;
 
-import algorithm.leetcode.problem.ListNode;
-import algorithm.leetcode.problem.CommonUtil;
+import algorithm.common.ListNode;
+import algorithm.util.CommonUtils;
 
 /**
  * 725. Split Linked List in Parts
@@ -43,7 +43,7 @@ import algorithm.leetcode.problem.CommonUtil;
 public class Solution {
 
     public static void main(String[] args) {
-        new Solution().splitListToParts(CommonUtil.stringToListNode("[1,2,3,4]"), 5);
+        new Solution().splitListToParts(CommonUtils.stringToListNode("[1,2,3,4]"), 5);
     }
     public ListNode[] splitListToParts(ListNode root, int k) {
         ListNode next = root;

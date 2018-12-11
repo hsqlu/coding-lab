@@ -1,4 +1,4 @@
-package com.hsqlu.bit;
+package basic.bit;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

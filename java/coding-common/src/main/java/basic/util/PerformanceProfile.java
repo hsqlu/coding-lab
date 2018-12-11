@@ -1,3 +1,5 @@
+package basic.util;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Map;
@@ -7,7 +9,7 @@ import java.util.Properties;
  * Created: 2016/4/5.
  * Author: Qiannan Lu
  */
-public class HelloWorld {
+public class PerformanceProfile {
     public static void main(String[] args) {
         try {
             // System信息，从jvm获取

@@ -1,6 +1,6 @@
 package algorithm.leetcode.problem.P24;
 
-import algorithm.leetcode.problem.ListNode;
+import algorithm.common.ListNode;
 
 /**
  * 24. Swap Nodes in Pairs

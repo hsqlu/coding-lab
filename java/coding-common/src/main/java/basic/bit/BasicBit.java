@@ -1,4 +1,4 @@
-package com.hsqlu.bit;
+package basic.bit;
 
 import org.junit.jupiter.api.Test;
 

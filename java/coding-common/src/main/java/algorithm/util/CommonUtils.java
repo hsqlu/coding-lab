@@ -1,6 +1,8 @@
-package algorithm.leetcode.problem;
+package algorithm.util;
 
-public class CommonUtil {
+import algorithm.common.ListNode;
+
+public class CommonUtils {
 
     public static ListNode stringToListNode(String input) {
         // Generate array from the input

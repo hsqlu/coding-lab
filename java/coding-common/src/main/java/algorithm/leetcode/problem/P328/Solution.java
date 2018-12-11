@@ -1,8 +1,8 @@
 package algorithm.leetcode.problem.P328;
 
-import algorithm.leetcode.problem.ListNode;
+import algorithm.common.ListNode;
 
-import static algorithm.leetcode.problem.CommonUtil.stringToListNode;
+import static algorithm.util.CommonUtils.stringToListNode;
 
 /**
  * 328. Odd Even Linked List

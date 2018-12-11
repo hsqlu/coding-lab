@@ -1,4 +1,4 @@
-package com.hsqlu.bit;
+package basic.bit;
 
 import com.google.common.primitives.Longs;
 

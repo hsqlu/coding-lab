@@ -1,6 +1,6 @@
 package algorithm.leetcode.problem.P141;
 
-import algorithm.leetcode.problem.ListNode;
+import algorithm.common.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

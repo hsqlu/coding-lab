@@ -1,7 +1,7 @@
 package algorithm.leetcode.problem.P92;
 
-import algorithm.leetcode.problem.ListNode;
-import algorithm.leetcode.problem.CommonUtil;
+import algorithm.common.ListNode;
+import algorithm.util.CommonUtils;
 
 /**
  * 92. Reverse Linked List II
@@ -21,7 +21,7 @@ import algorithm.leetcode.problem.CommonUtil;
  */
 public class Solution {
     public static void main(String[] args) {
-        new Solution().reverseBetween(CommonUtil.stringToListNode("[3, 5]"), 1, 2);
+        new Solution().reverseBetween(CommonUtils.stringToListNode("[3, 5]"), 1, 2);
     }
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (m == n) {

@@ -1,4 +1,4 @@
-package com.hsqlu.bit;
+package basic.bit;
 
 public class SignedAndUnsigned {
     public static void main(String[] args) {

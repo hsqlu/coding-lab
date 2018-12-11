@@ -1,6 +1,6 @@
 package algorithm.leetcode.problem.P148;
 
-import algorithm.leetcode.problem.ListNode;
+import algorithm.common.ListNode;
 
 import java.util.Arrays;
 import java.util.LinkedList;

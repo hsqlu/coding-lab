@@ -1,6 +1,6 @@
 package algorithm.leetcode.problem.P23;
 
-import algorithm.leetcode.problem.ListNode;
+import algorithm.common.ListNode;
 
 import java.util.PriorityQueue;
 
