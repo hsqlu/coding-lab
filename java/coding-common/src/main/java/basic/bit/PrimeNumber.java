@@ -2,7 +2,6 @@ package basic.bit;
 
 
 import com.google.common.primitives.Ints;
-import org.junit.jupiter.api.Test;
 
 /**
  * 筛1-100的素数，
@@ -55,7 +54,7 @@ public class PrimeNumber {
      *
      * 普通筛选法--埃拉托斯特尼筛法
      */
-    @Test
+//    @Test
     public void testPrintAllPrimeNumbers() {
         int max = 100;
         boolean[] flag = new boolean[max];
@@ -76,7 +75,7 @@ public class PrimeNumber {
     /**
      * 相比于{@link #testPrintAllPrimeNumbers()}在flag数组上得到了很大程度的压缩，用了bitmap的思想
      */
-    @Test
+//    @Test
     public void testPrintAllPrimeNumbers2() {
         int max = 100;
         int[] flag = new int[max / 32 + 1];
