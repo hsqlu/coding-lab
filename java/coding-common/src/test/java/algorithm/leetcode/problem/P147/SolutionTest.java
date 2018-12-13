@@ -1,6 +1,5 @@
 package algorithm.leetcode.problem.P147;
 
-import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -17,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Using @TestInstance, a new test instance will be created once per test class.
  */
+//@RunWith(JUnitPlatform.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class SolutionTest {
     private Solution solution;
