@@ -13,7 +13,7 @@
     <name>Coding :: Vampire</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>../coding-rest-client</module>
+<!--        <module>../coding-rest-client</module>-->
     </modules>
 
     <properties>

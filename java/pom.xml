@@ -6,7 +6,7 @@
         <groupId>com.hsqlu.coding</groupId>
         <artifactId>coding-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>coding-parent/</relativePath>
+        <relativePath>./coding-parent/</relativePath>
     </parent>
     <artifactId>coding-lab-platform</artifactId>
     <name>Coding :: Lab</name>
@@ -15,16 +15,18 @@
 
 
     <modules>
-        <module>coding-spring</module>
+<!--        <module>coding-spring</module>-->
 
         <module>coding-parent</module>
         <module>coding-common</module>
+        <module>coding-grpc</module>
         <module>coding-web</module>
-        <module>jmx-demo</module>
+<!--        <module>jmx-demo</module>-->
         <module>coding-io</module>
         <module>coding-concurrent</module>
         <module>coding-jmh</module>
         <module>coding-vampire</module>
+        <module>coding-vert.x</module>
         <module>coding-parent-web</module>
         <module>coding-cryptography</module>
     </modules>
