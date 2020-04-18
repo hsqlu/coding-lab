@@ -19,15 +19,15 @@
 
         <module>coding-parent</module>
         <module>coding-common</module>
-        <module>coding-grpc</module>
-        <module>coding-web</module>
+<!--        <module>coding-grpc</module>-->
+<!--        <module>coding-web</module>-->
 <!--        <module>jmx-demo</module>-->
-        <module>coding-io</module>
-        <module>coding-concurrent</module>
-        <module>coding-jmh</module>
-        <module>coding-vampire</module>
-        <module>coding-vert.x</module>
-        <module>coding-parent-web</module>
+<!--        <module>coding-io</module>-->
+<!--        <module>coding-concurrent</module>-->
+<!--        <module>coding-jmh</module>-->
+<!--        <module>coding-vampire</module>-->
+<!--        <module>coding-vert.x</module>-->
+<!--        <module>coding-parent-web</module>-->
         <module>coding-cryptography</module>
     </modules>
 
