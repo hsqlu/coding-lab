@@ -3,6 +3,8 @@ package basic.bit;
 
 import com.google.common.primitives.Ints;
 
+import java.util.Arrays;
+
 /**
  * 筛1-100的素数，
  * <p>
@@ -27,6 +29,29 @@ public class PrimeNumber {
             }
         }
         return true;
+    }
+
+    private int countPrimes(int n) {
+        boolean[] primes = new boolean[n];
+
+        Arrays.fill(primes, true);
+
+        for (int i = 2; i < primes.length; i++) {
+            if (primes[i]) {
+                for (int j = i; j * i < primes.length; j++) {
+                    primes[i * j] = false;
+                }
+            }
+        }
+
+        int count = 0;
+        for (int i = 2; 2 < primes.length; i++) {
+            if (primes[i]) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     private boolean isPrimeNum(int n) {
