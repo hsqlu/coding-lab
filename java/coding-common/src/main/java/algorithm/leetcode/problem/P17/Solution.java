@@ -22,53 +22,39 @@ import java.util.Stack;
  * Although the above answer is in lexicographical order, your answer could be in any order you want.
  */
 public class Solution {
+
+    private static char[][] holder = {
+            {'a', 'b', 'c'},
+            {'d', 'e', 'f'},
+            {'g', 'h', 'i'},
+            {'j', 'k', 'l'},
+            {'m', 'n', 'o'},
+            {'p', 'q', 'r', 's'},
+            {'t', 'u', 'v'},
+            {'w', 'x', 'y', 'z'}
+    };
+
     public List<String> letterCombinations(String digits) {
-        List<String> result = new ArrayList<>();
+        List<String> ans = new ArrayList<>();
 
-        if (digits == null || digits.length() == 0) {
-            return result;
+        if (null == digits || digits.isEmpty()) {
+            return ans;
         }
-        char[] chars = digits.toCharArray();
-
-        String[] mapping = new String[] {
-                "abc",
-                "def",
-                "ghi",
-                "jkl",
-                "mno",
-                "pqrs",
-                "tuv",
-                "wxyz"
-        };
-
-//        for (int i = 0; i < chars.length; i++) {
-//            char[] starts = mapping[chars[i] - '2'].toCharArray();
-//            for (char s : starts) {
-//                if (digits.substring(i + 1).length() == 0) {
-//                    result.add(String.valueOf(s));
-//                } else {
-//                    List<String> res = letterCombinations(digits.substring(i+1));
-//                    for (String subRes : res) {
-//                        result.add(s + subRes);
-//                    }
-//                }
-//            }
-//        }
-        char[] starts = mapping[chars[0] - '2'].toCharArray();
-        if (digits.length() == 1) {
-            for (char c : starts) {
-                result.add(String.valueOf(c));
-            }
-        } else {
-            for (char c : chars) {
-                List<String> res = letterCombinations(digits.substring(1));
-                for (String s : res) {
-                    result.add(c + s);
-                }
-            }
-        }
-
-        return result;
+        backtracking(digits, 0, "", ans);
+        return ans;
     }
 
+    void backtracking(String digits, int index, String current, List<String> ans) {
+        if (index >= digits.length()) {
+            ans.add(current);
+            return;
+        }
+
+        int charsIndex = digits.charAt(index) - '2';
+
+        for (char c : holder[charsIndex]) {
+            String sb = current + c;
+            backtracking(digits,index+1, sb, ans);
+        }
+    }
 }
