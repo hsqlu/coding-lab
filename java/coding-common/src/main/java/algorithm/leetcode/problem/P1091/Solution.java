@@ -1,10 +1,9 @@
 package algorithm.leetcode.problem.P1091;
 
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 
-import static algorithm.common.Helper.directions;
+import static algorithm.common.Helper.allDirections;
 
 /**
  * 1091. Shortest Path in Binary Matrix
@@ -57,7 +56,7 @@ public class Solution {
                     return ans;
                 }
                 grid[r][c] = 1;
-                for (int[] dir : directions) {
+                for (int[] dir : allDirections) {
                     int nr = r + dir[0];
                     int nc = c + dir[1];
 
