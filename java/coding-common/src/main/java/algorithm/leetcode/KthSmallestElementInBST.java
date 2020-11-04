@@ -1,5 +1,7 @@
 package algorithm.leetcode;
 
+import algorithm.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -36,16 +38,5 @@ public class KthSmallestElementInBST {
         }
 
         return index.get(k - 1).val;
-    }
-}
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
     }
 }

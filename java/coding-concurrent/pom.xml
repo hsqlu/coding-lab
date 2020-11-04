@@ -12,7 +12,7 @@
 
     <groupId>com.hsqlu.coding.concurrent</groupId>
     <artifactId>coding-concurrent</artifactId>
-    <version>${platform.version}</version>
+    <version>1.0.0</version>
     <description>Coding :: Lab :: Concurrent</description>
 
     <dependencies>

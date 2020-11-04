@@ -26,7 +26,7 @@ public class Task implements Runnable {
 
         for (int i = 0; i < 100; ++i) {
             Event event = new Event(delay);
-            queue.add(event);
+            this.queue.add(event);
         }
     }
 

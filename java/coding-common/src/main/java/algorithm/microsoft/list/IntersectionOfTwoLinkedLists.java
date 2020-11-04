@@ -1,0 +1,19 @@
+package algorithm.microsoft.list;
+
+import algorithm.common.ListNode;
+
+public class IntersectionOfTwoLinkedLists {
+
+    // TODO Remember check l1/l2 is null
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode l1 = headA, l2 = headB;
+
+        while (l1 != l2) {
+            l1 = l1 == null ? headB : l1.next;
+            l2 = l2 == null ? headA : l2.next;
+        }
+
+        return l1;
+    }
+
+}
