@@ -88,3 +88,23 @@ state for POC and production.
 
 The example includes a common `MeshCircuitBreaker` baseline and environment-
 specific service circuit breakers managed with `for_each`.
+
+## Configure Konnect organization OIDC
+
+The `Configure Konnect OIDC` workflow configures organization-level OIDC SSO
+through the Konnect Identity API. It runs only through manual dispatch and
+always executes a preview before an optional apply.
+
+Configure these GitHub Actions secrets:
+
+- `KONNECT_TOKEN`: a PAT or system-account token with Konnect identity-admin
+  permissions
+- `KONNECT_OIDC_CLIENT_SECRET`: the client secret from the OIDC application
+
+Create a protected GitHub Environment named `konnect-production` and require
+reviewers for it. Select `apply=true` to enter that approval gate. Keep
+`enable_oidc=false` for the initial provider configuration, then test the
+login path before enabling OIDC in a later run.
+
+The workflow intentionally never disables built-in authentication. Kong
+recommends keeping it enabled until OIDC login has been tested successfully.

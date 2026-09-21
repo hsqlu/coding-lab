@@ -1,0 +1,122 @@
+name: Configure Konnect OIDC
+
+on:
+  workflow_dispatch:
+    inputs:
+      issuer_url:
+        description: OIDC issuer URL, without .well-known/openid-configuration
+        required: true
+        type: string
+      client_id:
+        description: OIDC application client ID
+        required: true
+        type: string
+      login_path:
+        description: Unique alphanumeric Konnect organization login path
+        required: true
+        type: string
+      name_claim:
+        description: OIDC claim containing the user's display name
+        required: true
+        default: name
+        type: string
+      email_claim:
+        description: OIDC claim containing the user's email address
+        required: true
+        default: email
+        type: string
+      groups_claim:
+        description: OIDC claim containing group memberships
+        required: true
+        default: groups
+        type: string
+      enable_oidc:
+        description: Enable OIDC after saving the provider; keep false for initial setup
+        required: true
+        default: false
+        type: boolean
+      apply:
+        description: Apply the change after the protected-environment approval
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: konnect-organization-oidc
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    name: Preview OIDC configuration
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      KONNECT_TOKEN: ${{ secrets.KONNECT_TOKEN }}
+      OIDC_CLIENT_SECRET: ${{ secrets.KONNECT_OIDC_CLIENT_SECRET }}
+      OIDC_ISSUER_URL: ${{ inputs.issuer_url }}
+      OIDC_CLIENT_ID: ${{ inputs.client_id }}
+      OIDC_LOGIN_PATH: ${{ inputs.login_path }}
+      OIDC_NAME_CLAIM: ${{ inputs.name_claim }}
+      OIDC_EMAIL_CLAIM: ${{ inputs.email_claim }}
+      OIDC_GROUPS_CLAIM: ${{ inputs.groups_claim }}
+      ENABLE_OIDC: ${{ inputs.enable_oidc }}
+      APPLY: "false"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate required secrets
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          [[ -n "${KONNECT_TOKEN}" ]] || {
+            echo "KONNECT_TOKEN is not configured" >&2
+            exit 1
+          }
+          [[ -n "${OIDC_CLIENT_SECRET}" ]] || {
+            echo "KONNECT_OIDC_CLIENT_SECRET is not configured" >&2
+            exit 1
+          }
+
+      - name: Preview Konnect OIDC configuration
+        run: bash ./scripts/configure-konnect-oidc.sh
+
+  apply:
+    name: Apply OIDC configuration
+    if: ${{ inputs.apply }}
+    needs: preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: konnect-production
+    env:
+      KONNECT_TOKEN: ${{ secrets.KONNECT_TOKEN }}
+      OIDC_CLIENT_SECRET: ${{ secrets.KONNECT_OIDC_CLIENT_SECRET }}
+      OIDC_ISSUER_URL: ${{ inputs.issuer_url }}
+      OIDC_CLIENT_ID: ${{ inputs.client_id }}
+      OIDC_LOGIN_PATH: ${{ inputs.login_path }}
+      OIDC_NAME_CLAIM: ${{ inputs.name_claim }}
+      OIDC_EMAIL_CLAIM: ${{ inputs.email_claim }}
+      OIDC_GROUPS_CLAIM: ${{ inputs.groups_claim }}
+      ENABLE_OIDC: ${{ inputs.enable_oidc }}
+      APPLY: "true"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Apply Konnect OIDC configuration
+        run: bash ./scripts/configure-konnect-oidc.sh
+
+      - name: Publish login test URL
+        run: |
+          {
+            echo '### Konnect OIDC configured'
+            echo
+            echo "Test login: https://cloud.konghq.com/login/${OIDC_LOGIN_PATH}"
+            echo
+            echo 'Built-in authentication was not disabled.'
+          } >> "${GITHUB_STEP_SUMMARY}"
