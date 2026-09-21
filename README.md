@@ -53,3 +53,38 @@ KUBE_CONTEXT=my-global-cluster MESH_NAME=poc \
 ```
 
 `ACTIVE_KUBE_CONTEXT` is accepted as an alias for `KUBE_CONTEXT`.
+
+## Apply a Mesh through the Konnect API
+
+Use the Konnect Mesh HTTP API when the beta Terraform provider is not approved.
+The script configures a built-in CA and defaults to a dry run:
+
+```shell
+KONNECT_CONTROL_PLANE_ID=<control-plane-id> \
+KONNECT_TOKEN=<personal-access-token> \
+  ./scripts/apply-konnect-mesh.sh
+```
+
+Review the payload and diff, then apply it explicitly:
+
+```shell
+KONNECT_CONTROL_PLANE_ID=<control-plane-id> \
+KONNECT_TOKEN=<personal-access-token> \
+APPLY=true \
+  ./scripts/apply-konnect-mesh.sh
+```
+
+Defaults are region `au`, mesh `baas`, backend `baas-ca`, CA RSA 2048 with a
+10-year expiration, and a one-day data-plane certificate expiration. Override
+them with `KONNECT_REGION`, `MESH_NAME`, `CA_BACKEND_NAME`, `CA_RSA_BITS`,
+`CA_EXPIRATION`, and `DP_CERT_EXPIRATION`.
+
+## Mesh policies by environment
+
+The [`examples/mesh-policy-environments`](examples/mesh-policy-environments)
+example separates policies shared by every environment from policies owned by
+one environment. It uses reusable modules and a separate Terraform root and
+state for POC and production.
+
+The example includes a common `MeshCircuitBreaker` baseline and environment-
+specific service circuit breakers managed with `for_each`.

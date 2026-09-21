@@ -1,0 +1,16 @@
+mesh_control_plane_id = "00000000-0000-0000-0000-000000000000"
+mesh_name             = "poc"
+
+service_circuit_breakers = {
+  payments = {
+    service_name = "payments"
+    section_name = "http"
+
+    limits = {
+      max_connections      = 20
+      max_pending_requests = 10
+      max_requests         = 50
+      max_retries          = 2
+    }
+  }
+}

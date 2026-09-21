@@ -1,0 +1,16 @@
+mesh_control_plane_id = "00000000-0000-0000-0000-000000000000"
+mesh_name             = "production"
+
+service_circuit_breakers = {
+  payments = {
+    service_name = "payments"
+    section_name = "http"
+
+    limits = {
+      max_connections      = 200
+      max_pending_requests = 50
+      max_requests         = 500
+      max_retries          = 3
+    }
+  }
+}
